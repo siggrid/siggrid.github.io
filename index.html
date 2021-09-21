@@ -1,1 +1,109 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible navbar example</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" id="font-awesome-free-css" href="//use.fontawesome.com/releases/v5.15.1/css/all.css?ver=5.8.1"
+    type="text/css" media="all">
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__logo logo">
+        <img src="images/dcdd_logo.png" alt="Dutch Coalition on Disability and Development">
+      </div>
+      <div class="header__services">
+        <ul class="header__languages list">
+          <li>
+            <a class="languages-link" href="#">
+              <span>
+                <img width="18" height="12" alt="nl_NL" title="Nederlands" src="images/nl_NL.png">
+                <span>NL</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="languages-link" href="#">
+              <span>
+                <img width="18" height="12" alt="en_GB" title="English (UK)" src="images/en_GB.png">
+                <span class="trp-ls-language-name">EN</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <div class="header__search">
+          <input type="search" value="" name="s" class="s" placeholder="Search ...">
+          <button aria-label="Search">
+            <span class="fa fa-search"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <nav class="header__navigation navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__top-link" href="https://www.dcdd.nl/who-we-are/">Who we are</a>
+            <button class="navigation__btn" aria-controls="community" aria-expanded="false"
+              aria-label="Who we are"></button>
+            <!-- TO DO: add visual indicator of the dropdown show/hide state -->
+            <ul class="dropdown-list" id="community">
+              <li><a class="dropdown-list__link" href="">Vision and Mission</a></li>
+              <li><a class="dropdown-list__link" href="">Team</a></li>
+              <li><a class="dropdown-list__link" href="">History</a></li>
+              <li><a class="dropdown-list__link" href="">Annual Reports</a></li>
+            </ul>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__top-link" href="https://www.dcdd.nl/what-we-do/">What we do</a>
+            <button class="navigation__btn" aria-controls="resources" aria-expanded="false"
+              aria-label="What we do"></button>
+            <ul class="dropdown-list" id="resources">
+              <li><a class="dropdown-list__link" href="">Lobby</a></li>
+              <li><a class="dropdown-list__link" href="">Linking</a></li>
+              <li><a class="dropdown-list__link" href="">Learning</a></li>
+              <li><a class="dropdown-list__link" href="">Projects</a></li>
+            </ul>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__top-link" href="https://www.dcdd.nl/members/">Participants</a>
+            <button class="navigation__btn" aria-controls="shop" aria-expanded="false"
+              aria-label="Participants"></button>
+            <ul class="dropdown-list" id="shop">
+              <li><a class="dropdown-list__link" href="">Our Participants</a></li>
+              <li><a class="dropdown-list__link" href="">Become a participant</a></li>
+            </ul>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__top-link" href="https://www.dcdd.nl/resources/">Resources</a>
+            <button class="navigation__btn" aria-controls="resources" aria-expanded="false"
+              aria-label="Resources"></button>
+            <ul class="dropdown-list" id="resources">
+              <li><a class="dropdown-list__link" href="">Thematic categories</a></li>
+              <li><a class="dropdown-list__link" href="">All the resources</a></li>
+            </ul>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__top-link" title="News" href="https://www.dcdd.nl/news/">News</a>
+            <button class="navigation__btn" aria-controls="shop" aria-expanded="false" aria-label="News"></button>
+            <ul class="dropdown-list" id="shop">
+              <li><a class="dropdown-list__link" href="">Newsfeed</a></li>
+              <li><a class="dropdown-list__link" href="">Newsletters</a></li>
+              <li><a class="dropdown-list__link" href="">Events</a></li>
+            </ul>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__top-link" title="send message" href="https://www.dcdd.nl/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <script src="nav.js"></script>
+</body>
+
+</html>
